@@ -4,8 +4,19 @@ import NewInsightsCard from "@/components/NewInsightsCard";
 import QualityInsightChart from "@/components/QualityInsightChart";
 import RecentLeadsTable from "@/components/RecentLeadsTable";
 import ScoreCard from "@/components/ScoreCard";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
 import { Separator } from "@radix-ui/react-separator";
 import { useState } from "react";
 
@@ -20,67 +31,11 @@ const DashboardPage = () => {
     pointsRedeemed: 750,
     leadsSubmitted: 45,
     acceptanceRate: 82,
-    leadsRejected: 10
+    leadsRejected: 10,
   });
 
   // Mock data for recent leads
-  const [recentLeads] = useState([
-    {
-      id: 1,
-      name: "Alice Johnson",
-      company: "TechNova Inc.",
-      jobTitle: "CTO",
-      email: "alice@technova.com",
-      phone: "+1 (555) 123-4567",
-      status: "qualified" as "qualified" | "rejected" | "pending",
-      score: 92,
-      date: "2 days ago"
-    },
-    {
-      id: 2,
-      name: "Bob Williams",
-      company: "Global Finance",
-      jobTitle: "VP Finance",
-      email: "bob@globalfin.com",
-      phone: "+1 (555) 234-5678",
-      status: "qualified" as "qualified" | "rejected" | "pending",
-      score: 85,
-      date: "3 days ago"
-    },
-    {
-      id: 3,
-      name: "Carol Davis",
-      company: "Healthcare Plus",
-      jobTitle: "Director of Operations",
-      email: "carol@healthcareplus.com",
-      phone: "+1 (555) 345-6789",
-      status: "pending" as "qualified" | "rejected" | "pending",
-      score: 65,
-      date: "4 days ago"
-    },
-    {
-      id: 4,
-      name: "Dave Miller",
-      company: "Retail Solutions",
-      jobTitle: "Sales Manager",
-      email: "dave@retailsol.com",
-      phone: "+1 (555) 456-7890",
-      status: "rejected" as "qualified" | "rejected" | "pending",
-      score: 35,
-      date: "5 days ago"
-    },
-    {
-      id: 5,
-      name: "Eve Wilson",
-      company: "EdTech Innovations",
-      jobTitle: "Product Manager",
-      email: "eve@edtech.com",
-      phone: "+1 (555) 567-8901",
-      status: "qualified" as "qualified" | "rejected" | "pending",
-      score: 88,
-      date: "1 week ago"
-    }
-  ]);
+  const [recentLeads] = useState([]);
 
   // Mock data for chart
   const [chartData] = useState([
@@ -92,7 +47,6 @@ const DashboardPage = () => {
     { month: "Jun", score: 80, accepted: 25, rejected: 5 },
   ]);
   // Mock data for rewards
-
 
   return (
     <SidebarProvider>
@@ -107,9 +61,7 @@ const DashboardPage = () => {
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem className="hidden md:block">
-                <BreadcrumbLink href="#">
-                  Lead Validations
-                </BreadcrumbLink>
+                <BreadcrumbLink href="#">Lead Validations</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator className="hidden md:block" />
               <BreadcrumbItem>
@@ -118,39 +70,36 @@ const DashboardPage = () => {
             </BreadcrumbList>
           </Breadcrumb>
         </header>
-    <div className="bg-gray-50">
-      <main className="container mx-auto px-4 py-8 ">
-        {/* <h1 className="text-3xl font-bold mb-6">Partner Dashboard</h1> */}
-        
-        <div className="space-y-6">
-          {/* Performance Overview */}
-          <ScoreCard 
-            score={partnerData.score}
-            rank={partnerData.rank}
-            pointsEarned={partnerData.pointsEarned}
-            pointsRedeemed={partnerData.pointsRedeemed}
-            leadsSubmitted={partnerData.leadsSubmitted}
-            acceptanceRate={partnerData.acceptanceRate}
-            leadsRejected={partnerData.leadsRejected}
-          />
-          
-          {/* Quality Insights Chart */}
-          <QualityInsightChart data={chartData} />
-          
-          <NewInsightsCard />
+        <div className="bg-gray-50">
+          <main className="container mx-auto px-4 py-8 ">
+            {/* <h1 className="text-3xl font-bold mb-6">Partner Dashboard</h1> */}
 
+            <div className="space-y-6">
+              {/* Performance Overview */}
+              <ScoreCard
+                score={partnerData.score}
+                rank={partnerData.rank}
+                pointsEarned={partnerData.pointsEarned}
+                pointsRedeemed={partnerData.pointsRedeemed}
+                leadsSubmitted={partnerData.leadsSubmitted}
+                acceptanceRate={partnerData.acceptanceRate}
+                leadsRejected={partnerData.leadsRejected}
+              />
 
+              {/* Quality Insights Chart */}
+              <QualityInsightChart data={chartData} />
 
+              <NewInsightsCard />
 
-          {/* Recent Leads */}
-          <div className="space-y-3">
-            <h2 className="text-xl font-bold">Recent Leads Submitted</h2>
-            <RecentLeadsTable leads={recentLeads} />
-          </div>
+              {/* Recent Leads */}
+              <div className="space-y-3">
+                <h2 className="text-xl font-bold">Recent Leads Submitted</h2>
+                <RecentLeadsTable leads={recentLeads} />
+              </div>
+            </div>
+          </main>
         </div>
-      </main>
-    </div>
-    </SidebarInset>
+      </SidebarInset>
     </SidebarProvider>
   );
 };
