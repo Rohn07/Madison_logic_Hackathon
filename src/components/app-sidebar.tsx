@@ -23,24 +23,25 @@ const data = {
       url: "#",
       items: [
         {
-          title: "Dashboard",
-          url: "/dashboard",
-          isActive: false,
-        },
-        {
-          title: "Field Score",
+          title: "Fields Weightage",
           url: "/leads",
           isActive: false,
         },{
-          title: "Leads",
+          title: "Lead Management",
           url: "/lead-listing",
           isActive: false,
-        },
-        {
-          title: "Partners",
-          url: "/leaderboard",
-          isActive: false,
-        },
+        }
+        // {
+        //   title: "Dashboard",
+        //   url: "/dashboard",
+        //   isActive: false,
+        // },
+        // ,
+        // {
+        //   title: "Partners",
+        //   url: "/leaderboard",
+        //   isActive: false,
+        // },
       ],
     }
  

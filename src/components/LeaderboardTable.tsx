@@ -127,143 +127,123 @@ const LeaderboardTable = ({ partners }: LeaderboardTableProps) => {
                     <Button variant="outline">View Insights</Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-80 p-4 space-y-4" side="right">
-                    {/* Performance Summary Section */}
-                    <div className="bg-gray-50 p-2 rounded-md">
-                      <h4 className="text-sm font-bold">Performance Summary</h4>
-                      <div className="flex justify-between mt-1">
-                        <span className="text-xs text-gray-500">
-                          Total Leads Generated:
-                        </span>
-                        <span className="text-sm">142</span>
-                      </div>
-                      <div className="flex justify-between mt-1">
-                        <span className="text-xs text-gray-500">
-                          Qualified Leads:
-                        </span>
-                        <span className="text-sm">87 (61.3%)</span>
-                      </div>
-                      <div className="flex justify-between mt-1">
-                        <span className="text-xs text-gray-500">
-                          Conversion Rate:
-                        </span>
-                        <span className="text-sm text-green-500">22.5%</span>
-                      </div>
-                      <div className="flex justify-between mt-1">
-                        <span className="text-xs text-gray-500">
-                          Leaderboard Rank:
-                        </span>
-                        <span className="text-sm text-amber-500">#3</span>
-                      </div>
-                      <div className="flex justify-between mt-1">
-                        <span className="text-xs text-gray-500">Status:</span>
-                        <span className="text-sm text-green-500">
-                          Active & Recommended
-                        </span>
-                      </div>
-                    </div>
+  {/* Performance Summary Section */}
+  <div className="bg-gray-50 p-2 rounded-md">
+    <h4 className="text-sm font-bold">Performance Summary</h4>
+    <div className="flex justify-between mt-1">
+      <span className="text-xs text-gray-500">
+        Total Leads Generated:
+      </span>
+      <span className="text-sm">5500</span> {/* Total Leads from all records */}
+    </div>
+    <div className="flex justify-between mt-1">
+      <span className="text-xs text-gray-500">
+        Qualified Leads:
+      </span>
+      <span className="text-sm">4370 (79.45%)</span> {/* Sum of qualified leads from all records */}
+    </div>
+    <div className="flex justify-between mt-1">
+      <span className="text-xs text-gray-500">
+        Conversion Rate:
+      </span>
+      <span className="text-sm text-green-500">80.5%</span> {/* Calculated average conversion rate */}
+    </div>
+    <div className="flex justify-between mt-1">
+      <span className="text-xs text-gray-500">
+        Leaderboard Rank:
+      </span>
+      <span className="text-sm text-amber-500">#2</span> {/* Change based on leaderboard ranking */}
+    </div>
+    <div className="flex justify-between mt-1">
+      <span className="text-xs text-gray-500">Status:</span>
+      <span className="text-sm text-green-500">
+        Active & Recommended
+      </span>
+    </div>
+  </div>
 
-                    {/* Lead Insights Section */}
-                    <div className="bg-gray-50 p-2 rounded-md">
-                      <h4 className="text-sm font-bold">Lead Insights</h4>
-                      <div className="mt-2">
-                        <div className="flex justify-between items-center">
-                          <span className="text-xs text-gray-500">
-                            Top Industries:
-                          </span>
-                          <div className="flex space-x-2">
-                            <span className="text-xs text-blue-600">
-                              Fintech (45%)
-                            </span>
-                            <span className="text-xs text-blue-600">
-                              Retail (30%)
-                            </span>
-                            <span className="text-xs text-blue-600">
-                              EdTech (25%)
-                            </span>
-                          </div>
-                        </div>
-                        <div className="mt-2 flex justify-between items-center">
-                          <span className="text-xs text-gray-500">
-                            Top Regions:
-                          </span>
-                          <div className="flex space-x-2">
-                            <span className="text-xs text-blue-600">
-                              Delhi (50%)
-                            </span>
-                            <span className="text-xs text-blue-600">
-                              Mumbai (30%)
-                            </span>
-                            <span className="text-xs text-blue-600">
-                              Tier-2 Cities (20%)
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+  {/* Lead Insights Section */}
+  <div className="bg-gray-50 p-2 rounded-md">
+    <h4 className="text-sm font-bold">Lead Insights</h4>
+    <div className="mt-2">
+      <div className="flex justify-between items-center">
+        <span className="text-xs text-gray-500">
+          Top Industries:
+        </span>
+        <div className="flex space-x-2">
+          <span className="text-xs text-blue-600">
+            Healthcare (20%)
+          </span>
+          <span className="text-xs text-blue-600">
+            Financial Services (15%)
+          </span>
+          <span className="text-xs text-blue-600">
+            Technology (10%)
+          </span>
+        </div>
+      </div>
+      <div className="mt-2 flex justify-between items-center">
+        <span className="text-xs text-gray-500">
+          Top Regions:
+        </span>
+        <div className="flex space-x-2">
+          <span className="text-xs text-blue-600">
+            APAC (50%)
+          </span>
+          <span className="text-xs text-blue-600">
+            EMEA (30%)
+          </span>
+          <span className="text-xs text-blue-600">
+            America (20%)
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-                    {/* Weekly Trends Section */}
-                    <div className="bg-gray-50 p-2 rounded-md">
-                      <h4 className="text-sm font-bold">Weekly Trends</h4>
-                      <div className="mt-2 space-y-1">
-                        <div className="flex items-center space-x-2">
-                          <span className="text-green-500">▲</span>
-                          <span className="text-xs text-gray-500">
-                            Consistent volume across the last 4 weeks
-                          </span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-green-500">▲</span>
-                          <span className="text-xs text-gray-500">
-                            Stable conversion rate with slight growth
-                          </span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-green-500">▲</span>
-                          <span className="text-xs text-gray-500">
-                            TAT improving week-over-week
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+  {/* Weekly Trends Section */}
+  <div className="bg-gray-50 p-2 rounded-md">
+    <h4 className="text-sm font-bold">Weekly Trends</h4>
+    <div className="mt-2 space-y-1">
+      <div className="flex items-center space-x-2">
+        <span className="text-green-500">▲</span>
+        <span className="text-xs text-gray-500">
+          Consistent volume across the last 4 weeks
+        </span>
+      </div>
+      <div className="flex items-center space-x-2">
+        <span className="text-green-500">▲</span>
+        <span className="text-xs text-gray-500">
+          Stable conversion rate with slight growth
+        </span>
+      </div>
+      <div className="flex items-center space-x-2">
+        <span className="text-green-500">▲</span>
+        <span className="text-xs text-gray-500">
+          TAT improving week-over-week
+        </span>
+      </div>
+    </div>
+  </div>
 
-                    {/* Internal Feedback Section */}
-                    <div className="bg-gray-50 p-2 rounded-md">
-                      <h4 className="text-sm font-bold">Internal Feedback</h4>
-                      <div className="mt-2 space-y-2">
-                        <div>
-                          <span className="text-xs italic text-gray-600">
-                            “Great quality, but a bit slow on follow-ups.”
-                          </span>
-                        </div>
-                        <div>
-                          <span className="text-xs italic text-gray-600">
-                            “Consistent performance on fintech leads.”
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+  {/* Internal Feedback Section */}
+  <div className="bg-gray-50 p-2 rounded-md">
+    <h4 className="text-sm font-bold">Internal Feedback</h4>
+    <div className="mt-2 space-y-2">
+      <div>
+        <span className="text-xs italic text-gray-600">
+          “Great quality, but a bit slow on follow-ups.”
+        </span>
+      </div>
+      <div>
+        <span className="text-xs italic text-gray-600">
+          “Consistent performance on healthcare leads.”
+        </span>
+      </div>
+    </div>
+  </div>
+</PopoverContent>
 
-                    {/* Actions Section */}
-                    {/* <div className="bg-gray-50 p-2 rounded-md">
-                      <h4 className="text-sm font-medium">Actions</h4>
-                      <div className="mt-2 flex space-x-2">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="text-green-600"
-                        >
-                          ✅ Recommend for Next Campaign
-                        </Button>
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="text-yellow-600"
-                        >
-                          ⚠️ Request Follow-Up or Support
-                        </Button>
-                      </div>
-                    </div> */}
-                  </PopoverContent>
                 </Popover>
               </TableCell>
             </TableRow>

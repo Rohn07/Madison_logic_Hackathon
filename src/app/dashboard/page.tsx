@@ -1,5 +1,6 @@
 "use client";
 import { AppSidebar } from "@/components/app-sidebar";
+import NewInsightsCard from "@/components/NewInsightsCard";
 import QualityInsightChart from "@/components/QualityInsightChart";
 import RecentLeadsTable from "@/components/RecentLeadsTable";
 import ScoreCard from "@/components/ScoreCard";
@@ -136,6 +137,11 @@ const DashboardPage = () => {
           {/* Quality Insights Chart */}
           <QualityInsightChart data={chartData} />
           
+          <NewInsightsCard />
+
+
+
+
           {/* Recent Leads */}
           <div className="space-y-3">
             <h2 className="text-xl font-bold">Recent Leads Submitted</h2>

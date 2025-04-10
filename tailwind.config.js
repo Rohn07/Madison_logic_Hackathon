@@ -5,7 +5,13 @@ module.exports = {
     './node_modules/@shadcn/ui/**/*.{js,ts,jsx,tsx}', // for ShadCN components
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        bronze: "#cd7f32", // Adjust bronze color as needed
+        silver: "#c0c0c0",  // Adjust silver color as needed
+        gold: "#ffd700",    // Adjust gold color as needed
+      },
+    },
   },
   plugins: [],
 }
